@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>HGame week2 before_main【Re】（base64变体 - 换表） | 玛丽小姐帮我忏悔</title><meta name="author" content="WherreIsYuuka"><meta name="copyright" content="WherreIsYuuka"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="首先进入主函数查看 密文s1有明显 base64加密 特征，进入sub_12EB函数 12345678910111213141516171819202122232425262728293031323334353637_BYTE *__fastcall sub_12EB(const char *a1)&#123;  int v2; &#x2F;&#x2F; [rsp+10h] [rbp-20h]  int v3; &#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HGame week2 before_main【Re】（base64变体 - 换表）">
+<meta property="og:url" content="https://whereisyuuka.github.io/2024/04/04/HGame%20week2%20before_main%E3%80%90Re%E3%80%91%EF%BC%88base64%E5%8F%98%E4%BD%93%20-%20%E6%8D%A2%E8%A1%A8%EF%BC%89/index.html">
+<meta property="og:site_name" content="玛丽小姐帮我忏悔">
+<meta property="og:description" content="首先进入主函数查看 密文s1有明显 base64加密 特征，进入sub_12EB函数 12345678910111213141516171819202122232425262728293031323334353637_BYTE *__fastcall sub_12EB(const char *a1)&#123;  int v2; &#x2F;&#x2F; [rsp+10h] [rbp-20h]  int v3; &#x2F;&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://whereisyuuka.github.io/img/xiaohushi.png">
+<meta property="article:published_time" content="2024-04-04T09:00:37.500Z">
+<meta property="article:modified_time" content="2024-04-04T08:58:07.564Z">
+<meta property="article:author" content="WherreIsYuuka">
+<meta property="article:tag" content="逆向">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://whereisyuuka.github.io/img/xiaohushi.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://whereisyuuka.github.io/2024/04/04/HGame%20week2%20before_main%E3%80%90Re%E3%80%91%EF%BC%88base64%E5%8F%98%E4%BD%93%20-%20%E6%8D%A2%E8%A1%A8%EF%BC%89/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HGame week2 before_main【Re】（base64变体 - 换表）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-04-04 16:58:07'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/xiaohushi.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="玛丽小姐帮我忏悔"><span class="site-name">玛丽小姐帮我忏悔</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HGame week2 before_main【Re】（base64变体 - 换表）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-04T09:00:37.500Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-04T08:58:07.564Z" title="更新于 2024-04-04 16:58:07">2024-04-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HGame week2 before_main【Re】（base64变体 - 换表）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>首先进入主函数查看</p>
+<p><img src="https://img-blog.csdnimg.cn/d751918e6352465cac528ac261960155.png" alt="在这里插入图片描述"><br>密文s1有明显 base64加密 特征，进入<strong>sub_12EB</strong>函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">_BYTE *__fastcall <span class="title function_">sub_12EB</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2; <span class="comment">// [rsp+10h] [rbp-20h]</span></span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// [rsp+14h] [rbp-1Ch]</span></span><br><span class="line">  __int64 v4; <span class="comment">// [rsp+18h] [rbp-18h]</span></span><br><span class="line">  <span class="type">signed</span> __int64 v5; <span class="comment">// [rsp+20h] [rbp-10h]</span></span><br><span class="line">  _BYTE *v6; <span class="comment">// [rsp+28h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v5 = <span class="built_in">strlen</span>(a1);</span><br><span class="line">  <span class="keyword">if</span> ( v5 % <span class="number">3</span> )</span><br><span class="line">    v4 = <span class="number">4</span> * (v5 / <span class="number">3</span> + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    v4 = <span class="number">4</span> * (v5 / <span class="number">3</span>);</span><br><span class="line">  v6 = <span class="built_in">malloc</span>(v4 + <span class="number">1</span>);</span><br><span class="line">  v6[v4] = <span class="number">0</span>;</span><br><span class="line">  v2 = <span class="number">0</span>;</span><br><span class="line">  v3 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ( v2 &lt; v4 - <span class="number">2</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v6[v2] = *((_BYTE *)&amp;qword_4020 + ((<span class="type">unsigned</span> __int8)a1[v3] &gt;&gt; <span class="number">2</span>));</span><br><span class="line">    v6[v2 + <span class="number">1</span>] = *((_BYTE *)&amp;qword_4020 + ((<span class="number">16</span> * a1[v3]) &amp; <span class="number">0x30</span> | (<span class="type">unsigned</span> <span class="type">int</span>)((<span class="type">unsigned</span> __int8)a1[v3 + <span class="number">1</span>] &gt;&gt; <span class="number">4</span>)));</span><br><span class="line">    v6[v2 + <span class="number">2</span>] = *((_BYTE *)&amp;qword_4020 + ((<span class="number">4</span> * a1[v3 + <span class="number">1</span>]) &amp; <span class="number">0x3C</span> | (<span class="type">unsigned</span> <span class="type">int</span>)((<span class="type">unsigned</span> __int8)a1[v3 + <span class="number">2</span>] &gt;&gt; <span class="number">6</span>)));</span><br><span class="line">    v6[v2 + <span class="number">3</span>] = *((_BYTE *)&amp;qword_4020 + (a1[v3 + <span class="number">2</span>] &amp; <span class="number">0x3F</span>));</span><br><span class="line">    v3 += <span class="number">3</span>;</span><br><span class="line">    v2 += <span class="number">4</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( v5 % <span class="number">3</span> == <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v6[v2 - <span class="number">2</span>] = <span class="number">61</span>;</span><br><span class="line">    v6[v2 - <span class="number">1</span>] = <span class="number">61</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> ( v5 % <span class="number">3</span> == <span class="number">2</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v6[v2 - <span class="number">1</span>] = <span class="number">61</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> v6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>尝试对密文进行 base64 解码，结果出现乱码</p>
+<p><img src="https://img-blog.csdnimg.cn/f00e7be7f2ad45e6b84383701b6d4441.png" alt="在这里插入图片描述"></p>
+<p>思索到题目名为 <strong>before_main</strong>，故往前查看，没有发现关键函数再往回看，跟进qword_4020</p>
+<p><img src="https://img-blog.csdnimg.cn/a82c72929ed045b2b1d508fcbc9cc6ae.png" alt="在这里插入图片描述"></p>
+<p>推测为 base64变体 - 换表</p>
+<p>将其转为字符串后拼接，以此为编码表进行解码依旧没有成功</p>
+<p><img src="https://img-blog.csdnimg.cn/17b3bc6be0f44a9b82e7f5ac85bc30f6.png" alt="在这里插入图片描述"></p>
+<p>查看引用发现新函数并跟进</p>
+<p><img src="https://img-blog.csdnimg.cn/ea2104a5336841f8811363238e414719.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/66286356a45241be945d30ff71dfbf87.png" alt="在这里插入图片描述"></p>
+<p>以qaCpwYM2tO&#x2F;RP0XeSZv8kLd6nfA7UHJ1No4gF5zr3VsBQbl9juhEGymc+WTxIiDK为编码表进行解码</p>
+<p><img src="https://img-blog.csdnimg.cn/2d5f193094ae4515b6f09ea6ddd8a645.png" alt="在这里插入图片描述"></p>
+<p>最终得到 flag ：</p>
+<blockquote>
+<p>hgame{s0meth1ng_run_befOre_m@in}</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://whereisyuuka.github.io">WherreIsYuuka</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://whereisyuuka.github.io/2024/04/04/HGame%20week2%20before_main%E3%80%90Re%E3%80%91%EF%BC%88base64%E5%8F%98%E4%BD%93%20-%20%E6%8D%A2%E8%A1%A8%EF%BC%89/">https://whereisyuuka.github.io/2024/04/04/HGame%20week2%20before_main%E3%80%90Re%E3%80%91%EF%BC%88base64%E5%8F%98%E4%BD%93%20-%20%E6%8D%A2%E8%A1%A8%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://whereisyuuka.github.io" target="_blank">玛丽小姐帮我忏悔</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%80%86%E5%90%91/">逆向</a></div><div class="post_share"><div class="social-share" data-image="/img/xiaohushi.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/04/04/HGame%20week2%20stream%E3%80%90Re%E3%80%91%EF%BC%88Pyinstaller%20%E6%89%93%E5%8C%85%E7%9A%84%20exe%20%E6%96%87%E4%BB%B6%EF%BC%89/" title="HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）</div></div></a></div><div class="next-post pull-right"><a href="/2024/04/04/BUUCTF%20simpleRev%20%EF%BC%88%E6%B6%89%E5%8F%8A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89/" title="BUUCTF simpleRev （涉及大小端序存储）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">BUUCTF simpleRev （涉及大小端序存储）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/04/04/2022%E5%B9%B4%E6%98%A5%E7%A7%8B%E6%9D%AF%20easy_python/" title="2022年春秋杯easy_python"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">2022年春秋杯easy_python</div></div></a></div><div><a href="/2024/04/04/BUUCTF%20CrackRTF%20%EF%BC%88%E5%93%88%E5%B8%8CSHA1%E7%9A%84%E7%88%86%E7%A0%B4%E8%A7%A3%E5%AF%86%EF%BC%89/" title="BUUCTF CrackRTF （哈希SHA1的爆破解密）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">BUUCTF CrackRTF （哈希SHA1的爆破解密）</div></div></a></div><div><a href="/2024/04/04/BUUCTF%20simpleRev%20%EF%BC%88%E6%B6%89%E5%8F%8A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89/" title="BUUCTF simpleRev （涉及大小端序存储）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">BUUCTF simpleRev （涉及大小端序存储）</div></div></a></div><div><a href="/2024/04/04/BUUCTF%20Java%E9%80%86%E5%90%91%E8%A7%A3%E5%AF%86/" title="BUUCTF Java逆向解密"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">BUUCTF Java逆向解密</div></div></a></div><div><a href="/2024/04/04/HGame%20week2%20stream%E3%80%90Re%E3%80%91%EF%BC%88Pyinstaller%20%E6%89%93%E5%8C%85%E7%9A%84%20exe%20%E6%96%87%E4%BB%B6%EF%BC%89/" title="HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）</div></div></a></div><div><a href="/2024/04/04/BUUCTF%20%5BGXYCTF2019%5Dluck_guy/" title="BUUCTF GXYCTF2019luck_guy"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-04</div><div class="title">BUUCTF GXYCTF2019luck_guy</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/xiaohushi.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WherreIsYuuka</div><div class="author-info__description">玛丽的小耳朵香香的软软的</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/WhereIsYuuka"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">许久不见，甚是想念。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/04/BUUCTF%20CrackRTF%20%EF%BC%88%E5%93%88%E5%B8%8CSHA1%E7%9A%84%E7%88%86%E7%A0%B4%E8%A7%A3%E5%AF%86%EF%BC%89/" title="BUUCTF CrackRTF （哈希SHA1的爆破解密）">BUUCTF CrackRTF （哈希SHA1的爆破解密）</a><time datetime="2024-04-04T09:00:37.502Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/04/HGame%20week2%20stream%E3%80%90Re%E3%80%91%EF%BC%88Pyinstaller%20%E6%89%93%E5%8C%85%E7%9A%84%20exe%20%E6%96%87%E4%BB%B6%EF%BC%89/" title="HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）">HGame week2 stream【Re】（Pyinstaller 打包的 exe 文件）</a><time datetime="2024-04-04T09:00:37.501Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/04/HGame%20week2%20before_main%E3%80%90Re%E3%80%91%EF%BC%88base64%E5%8F%98%E4%BD%93%20-%20%E6%8D%A2%E8%A1%A8%EF%BC%89/" title="HGame week2 before_main【Re】（base64变体 - 换表）">HGame week2 before_main【Re】（base64变体 - 换表）</a><time datetime="2024-04-04T09:00:37.500Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/04/BUUCTF%20simpleRev%20%EF%BC%88%E6%B6%89%E5%8F%8A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89/" title="BUUCTF simpleRev （涉及大小端序存储）">BUUCTF simpleRev （涉及大小端序存储）</a><time datetime="2024-04-04T09:00:37.499Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/04/BUUCTF%20Java%E9%80%86%E5%90%91%E8%A7%A3%E5%AF%86/" title="BUUCTF Java逆向解密">BUUCTF Java逆向解密</a><time datetime="2024-04-04T09:00:37.498Z" title="发表于 2024-04-04 17:00:37">2024-04-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WherreIsYuuka</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
