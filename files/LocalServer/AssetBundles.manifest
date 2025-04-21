@@ -1,10 +1,7 @@
 ManifestFileVersion: 0
-CRC: 4112033900
+CRC: 1196904912
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: muyue_dance
-      Dependencies: {}
-    Info_1:
       Name: mari
       Dependencies: {}
