@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3247419277
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: mari
+      Dependencies: {}
+    Info_1:
+      Name: "\u7766\u6708\u8DF3\u821E"
+      Dependencies: {}
